@@ -4,6 +4,7 @@ import Welcome from '../pages/welcome/index';
 import Login from '../pages/login/index';
 import AuthGuard from '../components/AuthGuard';
 import Register from '../pages/register';
+import Chat from '../pages/chat';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ export const router = createBrowserRouter(
       />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
+      <Route path="chat" element={<Chat />} />
       {/* ... etc. */}
     </Route>
   )
