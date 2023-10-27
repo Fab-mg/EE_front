@@ -10,6 +10,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+#conteneur{
+  height: 80px;
+  border:1px ;
+  color: #FFFF;
+  width: 100%;
+  top:0; 
+  
+  position:fixed;
+  
+  
+  
+}
+#sous-conteneur{
+  
+  color: #FFFF;
+}
+
+#logo{
+  font-size: 20px;
+  font-weight: bolder;
+  margin : 5px
+}
+
+#video{
+    width:45em;
+   
+}
+#post{
+  margin:2em;
+  
+  
+}
+
+.card{
+  margin-left: 25%;
+  width:50%;
+  margin-top: 15px;
+  display: block; 
+ 
+}
+
+#searchBar{
+  margin-top : 10px;
+}
+#home{
+ margin-right: 20px;
+}
+#notification{
+  margin-right: 20px;
+}
+#relation{
+  margin-right: 20px;
+}
+#postTable{
+  margin-left: 25%
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

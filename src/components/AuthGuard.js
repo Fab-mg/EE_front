@@ -6,6 +6,7 @@ export default function AuthGuard({ children }) {
   const navigate = useNavigate();
   useEffect(() => {
     const token = Cookies.get('token');
+    console.log('token: ' + JSON.stringify(token));
     if (!token) {
       navigate('/login');
     }

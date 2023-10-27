@@ -1,5 +1,10 @@
 import React from 'react';
+import PostScreen from '../post/post';
 
 export default function Welcome() {
-  return <div className="text-green-600 text-lg border-[5px] border-black">Welcome</div>;
+  return (
+    <div className="">
+      <PostScreen />
+    </div>
+  );
 }
