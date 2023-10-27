@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import Cookies from 'js-cookie';
 
 export const loginUser = async (email, password) => {
   const uri = 'http://localhost:6969/auth/login';
@@ -45,6 +46,25 @@ export const registerUser = async (userInfo) => {
     return response;
   } catch (error) {
     console.log('Register failed: ', error);
+    return null;
+  }
+};
+
+export const getUserByID = async (userID) => {
+  console.log('I have been called for : ', userID);
+  const uri = `http://localhost:6969/users/${userID}`;
+  const token = Cookies.get('token');
+  try {
+    const response = await Axios.get(uri, {
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: token,
+      },
+    });
+    console.log('sending response', response.data);
+    return response.data;
+  } catch (error) {
+    console.log('Failed to get user data: ', error);
     return null;
   }
 };
